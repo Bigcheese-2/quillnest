@@ -39,7 +39,7 @@ export default function Footer() {
           </ul>
         </div>
         {/* Our Services */}
-        <div className="footer-section services-section flex-1 text-center md:text-left py-8 md:py-0" style={{ background: 'var(--footer-background)' }}>
+        <div className="footer-section services-section flex-1 text-center md:text-left py-8" style={{ background: 'var(--footer-background)' }}>
           <h4 className="font-semibold text-lg mb-2">Our Services</h4>
           <div className="w-16 h-1  bg-[#000000] md:bg-[#ffffff]  mb-4 mx-auto md:mx-0" />
           <ul className="flex flex-col gap-3">
