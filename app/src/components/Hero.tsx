@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useTheme } from "../contexts/ThemeContext";
 import Mockup from "./Mockup";
+import { motion } from 'framer-motion';
 
 const socialIcons = [
   { 
@@ -47,14 +48,31 @@ export default function Hero() {
     <div className="hero-section px-10 pb-10 pt-10 md:pt-0 md:h-[calc(100vh-60px)] lg:h-[calc(100vh-60px)] flex w-full justify-center items-center ">
       <div className="w-full md:space-y-10">
         <div className=" flex flex-col  gap-4 md:gap-10">
-          <h1 className=" text-5xl text-primary sm:text-7xl font-semibold tracking-tighter md:leading-7 text-center md:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className=" text-5xl text-primary sm:text-7xl font-semibold tracking-tighter md:leading-7 text-center md:text-left"
+          >
             Quill Nest
-          </h1>
-          <h3 className="text-secondary  font-semibold text-2xl text-center md:text-left sm:text-5xl">
+          </motion.h1>
+          <motion.h3
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+            className="text-secondary  font-semibold text-2xl text-center md:text-left sm:text-5xl"
+          >
             Sleep better today!
-          </h3>
+          </motion.h3>
         </div>
-        <div className="pb-10 pt-4 block md:hidden"> <Mockup /></div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.8 }}
+          className="pb-10 pt-4 block md:hidden"
+        >
+          <Mockup />
+        </motion.div>
         <div className=" flex flex-col justify-center items-center md:flex-row  md:justify-between md:items-center  ">
           <div className="flex flex-col md:flex-row gap-3 justify-between w-full items-center">
             <Link
