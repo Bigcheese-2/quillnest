@@ -83,6 +83,12 @@ export default function Hero() {
               <FaWhatsapp className="text-white" />
               Contact us
             </Link>
+            <div className=" md:hidden pt-8 mx-auto md:mx-0 w-fit flex gap-1 cursor-pointer">
+            <Image src={isDark ? "/maildark.svg" : "/mail.svg"} alt="" width={20} height={20} />
+            <p className="text-[#767877] font-semibold">
+              quillnest01@gmail.com
+            </p>
+          </div>
 
             <div className="hidden  md:flex gap-6 md:gap-4  justify-center items-center">
               {socialIcons.map((icon) => (
@@ -102,12 +108,6 @@ export default function Hero() {
               ))}
             </div>
 
-          </div>
-          <div className=" md:hidden pt-8 mx-auto md:mx-0 w-fit flex gap-1 cursor-pointer">
-            <Image src={isDark ? "/maildark.svg" : "/mail.svg"} alt="" width={20} height={20} />
-            <p className="text-[#767877] font-semibold">
-              quillnest01@gmail.com
-            </p>
           </div>
 
         </div>
