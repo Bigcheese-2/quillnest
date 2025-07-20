@@ -1,26 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #192CA7;
+  --foreground: #ffffff;
+  --primary: #000000;
+  --secondary: #767877;
+  --white: #ffffff;
+  --button:#192CA7;
+  --altbackground:#192CA7;
+  --footer-background: #ffffff;
+  --footer-altbackground: #192CA7;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #090909;
+  --primary: #ffffff;
+  --secondary: #ffffff;
+  --white: #000000;
+  --button:#ffffff;
+  --altbackground:#090909;
+  --footer-background: #000000;
+  --footer-altbackground: #090909;
+
+
 }
 
 @theme inline {
+  --color-altbackground: var(--altbackground);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-button: var(--button);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.hero-section {
+  background: var(--hero-background, #fff);
+}
+
+/* Light mode: always white */
+.hero-section {
+  --hero-background: #fff;
+}
+
+/* Dark mode: desktop */
+.dark .hero-section {
+  --hero-background: #090909;
+}
+
+/* Dark mode: mobile */
+@media (max-width: 767px) {
+  .dark .hero-section {
+    --hero-background: #000000;
+  }
+}
+
+/* Footer alternating backgrounds for mobile */
+@media (min-width: 768px) {
+  .footer-section {
+    --footer-background: var(--background);
+    --footer-altbackground: var(--background);
+  }
+}
+
+.footer-section.services-section {
+  color: #000 !important;
+}
+@media (min-width: 768px) {
+  .footer-section.services-section {
+    color: #fff !important;
+  }
+}
+@media (max-width: 767px) {
+  .dark .footer-section.services-section {
+    color: #fff !important;
+  }
+}
+
+.dark .footer-section {
+  color: #fff !important;
 }
