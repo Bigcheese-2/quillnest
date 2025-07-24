@@ -90,5 +90,58 @@ body {
 }
 
 .dark .footer-section {
+  background: var(--footer-altbackground);
+}
+.dark .footer-section.services-section {
+  background: var(--footer-background);
+}
+
+.footer-main {
+  background: var(--altbackground);
+}
+
+@media (min-width: 768px) {
+  .dark .footer-main {
+    background: var(--footer-background);
+  }
+}
+
+.dark .footer-main,
+.dark .footer-section,
+.dark .footer-section.services-section,
+.dark .footer-col-white {
   color: #fff !important;
+}
+
+.dark footer {
+  color: #fff !important;
+}
+
+.footer-col-blue {
+  background: var(--altbackground);
+  width: 100%;
+}
+.footer-col-white {
+  background: #fff;
+  color: #192CA7;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer-col-blue, .footer-col-white {
+    background: unset;
+    color: unset;
+  }
+}
+
+.header-bar {
+  background: #fff !important;
+}
+@media (min-width: 768px) {
+  .header-bar {
+    background: var(--altbackground) !important;
+  }
+}
+.dark .header-bar {
+  background: var(--background) !important;
 }

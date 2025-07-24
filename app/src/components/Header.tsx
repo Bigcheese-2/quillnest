@@ -19,7 +19,7 @@ export default function Header() {
   const isDark = theme === 'dark';
 
   return (
-    <div className='bg-white  md:bg-background w-full px-4 py-4 md:px-8 md:py-8 sticky z-50 top-0'>
+    <div className='header-bar w-full px-4 py-4 md:px-8 md:py-8 sticky z-50 top-0'>
       <div className='flex items-center justify-between'>
         <div>
           <Image className='hidden md:block' src="/QuillNestX.svg" alt='' width={80} height={30}/>
